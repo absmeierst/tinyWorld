@@ -1,0 +1,3 @@
+service {
+  "tinyWorld.tinydb::myview" as "euro" keys generate local "ID";
+}

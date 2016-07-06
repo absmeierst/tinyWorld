@@ -13,6 +13,13 @@ modules:
 - name: tinyjs
   type: nodejs
   path: tinyjs
+  requires: 
+  - name: tinydb
+  - name: hdi-container
+  provides:
+  - name: tinyjs_api
+    properties:
+      service_url: $(default-url)
 
 
 - name: tinyui
