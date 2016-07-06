@@ -4,4 +4,9 @@ context tinyf {
 	entity world {
 		key continent: String(100);
 	}
+
+entity country{
+ key name : String(100);
+partof : Association[0..1] to world;
+};
 }
