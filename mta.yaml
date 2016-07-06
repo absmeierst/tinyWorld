@@ -1,0 +1,24 @@
+_schema-version: 2.0.0
+ID: tinyWorld
+version: 0.0.1
+
+modules:
+- name: tinydb
+  type: hdb
+  path: tinydb
+  requires:
+   - name: hdi-container
+
+
+- name: tinyjs
+  type: nodejs
+  path: tinyjs
+
+
+- name: tinyui
+  type: html5
+  path: tinyui
+
+resources:
+- name: hdi-container
+  type: com.sap.xs.hdi-container
