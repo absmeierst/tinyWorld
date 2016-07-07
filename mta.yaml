@@ -19,7 +19,9 @@ modules:
   provides:
   - name: tinyjs_api
     properties:
-      service_url: $(default-url)
+      service_url: ${default-url}
+  properties:
+    NODE_TLS_REJECT_UNAUTHORIZED: 0
 
 
 - name: tinyui
