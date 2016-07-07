@@ -1,6 +1,18 @@
-<!DOCTYPE html>
-<html> 
-	<body> 
-		Tiny HTML World! 
-	</body> 
+<!DOCTYPE HTML><head><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>DevXdemo</title>
+<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+id="sap-ui-bootstrap" data-sap-ui-libs="sap.ui.commons, sap.ui.table" data-sap-ui-theme="sap_bluecrystal">
+</script>
+ 
+<script>
+  var oModel = new sap.ui.model.odata.ODataModel("/euro.xsodata", true);
+  var oTable = new sap.ui.table.Table({ title: "European Countries" });
+  oTable.addColumn(new sap.ui.table.Column({ label: "Country Name", template: "name" }));
+  oTable.setModel(oModel); oTable.bindRows("/euro"); oTable.placeAt("content");
+</script>
+ 
+</head>
+  <body class='sapUiBody'> 
+	<div id='content'></div> 
+  </body>
 </html>

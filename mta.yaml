@@ -1,6 +1,6 @@
 _schema-version: 2.0.0
 ID: tinyWorld
-version: 0.0.1
+version: 0.0.2
 
 modules:
 - name: tinydb
@@ -27,6 +27,13 @@ modules:
 - name: tinyui
   type: html5
   path: tinyui
+  requires:
+    - name: tinyjs_api
+      group: destinations
+      properties:
+        name: tinyjs_be
+        url: ~{service_url}
+
 
 resources:
 - name: hdi-container
