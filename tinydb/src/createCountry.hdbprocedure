@@ -1,0 +1,32 @@
+PROCEDURE "tinyWorld.tinydb::createCountry" (
+   IN im_country NVARCHAR(100), im_continent NVARCHAR(100),
+   OUT ex_error NVARCHAR(100))
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   --READS SQL DATA AS
+   AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+declare noc integer;
+select count(*) into noc
+  from "tinyWorld.tinydb::tinyf.world"
+  where "continent" = im_continent;
+ 
+if :noc = 0 then
+  ex_error := 'ERROR: Continent ' || :im_continent || ' does not exist!';
+else
+  select count(*) into noc
+     from "tinyWorld.tinydb::tinyf.country"
+     where "name" = im_country;
+  if :noc > 0 then
+     ex_error := 'ERROR: Country ' || :im_country || ' already exists!';
+  else
+     insert into "tinyWorld.tinydb::tinyf.country"
+           values (im_country, im_continent);
+  end if;
+end if;
+
+END
