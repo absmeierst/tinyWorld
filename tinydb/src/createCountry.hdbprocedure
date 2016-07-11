@@ -2,10 +2,11 @@ PROCEDURE "tinyWorld.tinydb::createCountry" (
    IN im_country NVARCHAR(100), im_continent NVARCHAR(100),
    OUT ex_error NVARCHAR(100))
    LANGUAGE SQLSCRIPT
-   SQL SECURITY INVOKER
+   SQL SECURITY INVOKER AS
    --DEFAULT SCHEMA <default_schema_name>
    --READS SQL DATA AS
-   AS
+   --AS
+
 BEGIN
    /*************************************
        Write your procedure logic 

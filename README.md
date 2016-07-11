@@ -9,3 +9,8 @@ http://scn.sap.com/community/developer-center/hana/blog/2016/03/28/developing-wi
 
 part4:
 http://scn.sap.com/community/developer-center/hana/blog/2016/03/28/developing-with-xs-advanced-add-sap-hana-business-logic
+
+part5:
+http://scn.sap.com/community/developer-center/hana/blog/2016/03/28/developing-with-xs-advanced-add-business-logic-with-nodejs
+
+optional
