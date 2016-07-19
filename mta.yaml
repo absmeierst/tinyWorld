@@ -1,5 +1,6 @@
 _schema-version: 2.0.0
-ID: tinyWorld
+ID: com.msggroup.dev.absmeies.tinyWorld
+description: TinyWolrdDemo
 version: 0.0.2
 
 modules:
@@ -38,3 +39,10 @@ modules:
 resources:
 - name: hdi-container
   type: com.sap.xs.hdi-container
+  
+- name: tiny_uaa
+  type: com.sap.xs.uaa
+  parameters:
+    path: ./security/xs-security.json
+    config:
+      xsappname: tinyworld
